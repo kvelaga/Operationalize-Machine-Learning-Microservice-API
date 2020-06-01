@@ -1,0 +1,17 @@
+srichakradhar@IdeaPad-Y480:~/Documents/Udacity/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh
+deployment.apps/mlms created
+NAME                    READY   STATUS    RESTARTS   AGE
+mlms-5595599bc8-hjpjw   0/1     Pending   0          0s
+service/mlms exposed
+
+srichakradhar@IdeaPad-Y480:~/Documents/Udacity/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pod
+NAME                    READY   STATUS    RESTARTS   AGE
+mlms-595cb47d5b-8vc2q   1/1     Running   0          13m
+
+srichakradhar@IdeaPad-Y480:~/Documents/Udacity/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
