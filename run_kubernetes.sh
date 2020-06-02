@@ -16,4 +16,5 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl expose deployment mlms --type=LoadBalancer --port=8000 --target-port=80
+# kubectl expose deployment mlms --type=LoadBalancer --port=8000 --target-port=80
+kubectl port-forward deployment/mlms 8000:80
